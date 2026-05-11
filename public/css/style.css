@@ -1,0 +1,18 @@
+#pageTop {
+    background-color: #494141;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #f50707;
+    font-size: 24px;
+    margin: 0;
+}
+
+p {
+    color: #0b07f5;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: left;
+}
