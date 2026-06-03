@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StreamHive</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -14,21 +13,22 @@
         <header>
         <h1>StreamHive</h1>
         <p id="logo">Dit is een placeholder voor het logo</p>
+        <button id="loginButton" type="submit">Login</button>
+        <button id="registerButton" type="submit">Register</button>
         </header>
     </div>
-    <button id="Register">Register</button>
-    <button id="Login">Login</button>
-    
-        <div class="Login_form">
+    <div id="loginModal" class="Modal">
             <form id="LoginForm">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required><br><br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required><br><br>
                 <input type="submit" value="Login">
+                <button id="forgotten password">Forgotten password</button>
             </form>
         </div>
-        <div class="Register_form">
+    </div>
+    <div id="registerModal" class="Modal">
             <form id="RegisterForm">
                 <label for="new_username">Username:</label>
                 <input type="text" id="new_username" name="new_username" required><br><br>
@@ -38,14 +38,21 @@
                 <input type="password" id="new_password" name="new_password" required><br><br>
                 <input type="submit" value="Register">
             </form>
-
+        </div>
     </div>
 
     <div id="videoSection">
         <section class="VideoRecommendation">
-            <p>Hier komen videos in een grid te staan</p>
+            <!-- functioneren als placeholders, met link naar database in de maak -->
+            <div class="video-card">Video 1</div>
+            <div class="video-card">Video 2</div>
+            <div class="video-card">Video 3</div>
+            <div class="video-card">Video 4</div>
+            <div class="video-card">Video 5</div>
+            <div class="video-card">Video 6</div>
         </section>
     </div>
+
 
     <div id="pageBottom">
         <footer>

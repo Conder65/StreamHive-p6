@@ -11,17 +11,100 @@ h1 {
 }
 
 p {
-    color: #0b07f5;
+    color: orangered;
     font-size: 16px;
     margin: 10px 0;
     text-align: left;
 }
 
 #videoSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding: 20px;
     background-color: #dad0d0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* make background follow the grid height */
+    min-height: 200px;
+    height: auto;
+}
+
+
+/* De volgende twee stukjes zorgen dat waar de videos komen in twee rijen onder elkaar komen, met meerdere videos daarnaast */
+.VideoRecommendation {
+    display: grid;
+    gap: 16px;
+    row-gap: 64px;     /* more space top-to-bottom */
+    column-gap: 64px;
+
+    /* exactly 2 rows */
+    grid-template-rows: repeat(2, 1fr);
+
+    /* fill columns left-to-right */
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(180px, 1fr);
+}
+
+
+.VideoRecommendation .video-card {
+    background: pink;
+    border-radius: 8px;
+    padding: 12px;
+    height: 100%;
+    gap: 8px;
+} 
+
+
+.Modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.45);
+
+
+    /* Center the modal form */
+    align-items: center;
+    justify-content: center;
+}
+
+/* modal content card */
+.Modal form{
+    background: #ffcc00; /* yellow modal card */
+    color: #000;
+
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    min-width: 320px;
+}
+
+
+#loginButton, #registerButton {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color: #ffcc00; /* yellow */
+    color: #000; /* black text */
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#loginButton:hover, #registerButton:hover{
+    background-color: #e10606; /* red on hover */
+    color: #fff;
+}
+
+
+#pageBottom {
+    background-color: #494141;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
